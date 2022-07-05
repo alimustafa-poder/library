@@ -67,10 +67,12 @@ function libGen(arr) {
             newPara.textContent = key;
             newDiv.append(newPara);
         })
+        newDiv.innerHTML += `<i class="fa-solid fa-circle-xmark"></i>`;
         newDiv.innerHTML += `<i class="fa-solid fa-trash-can"></i>`;
         myLibrary.append(newDiv);
     })
     delBook();
+    readBook();
 }
 
 //cancel the book addition
@@ -85,8 +87,23 @@ function delBook() {
         elem.addEventListener('click', (e) => {
             let bookCol = e.target.closest('div');
             let bookIndex = bookCol.getAttribute('data-column');
-            libArray.splice(bookIndex,bookIndex + 1);
+            libArray.splice(bookIndex, bookIndex + 1);
             libGen(libArray);
         })
+    })
+}
+
+function readBook() {
+    let del = document.querySelectorAll('.fa-circle-xmark');
+    del.forEach((elem) => {
+        elem.addEventListener('click', () => {
+                if (elem.classList.contains('fa-circle-xmark')) {
+                    elem.classList.remove('fa-circle-xmark');
+                    elem.classList.add('fa-circle-check');
+                } else {
+                    elem.classList.add('fa-circle-xmark');
+                    elem.classList.remove('fa-circle-check');
+                }
+            })
     })
 }
