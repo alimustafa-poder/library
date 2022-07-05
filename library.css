@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(158, 158, 212, 0.349);
+}
+
+nav {
+    text-align: center;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.bookBtn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.addBook {
+    padding: 10px;
+    color: white;
+    background-color: green;
+    font-weight: 600;
+    border: none;
+    margin-right: 15px;
+}
+
+.addBook:hover:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(2, 255, 255, 0.1), rgba(255, 255, 255, 0.5));
+    height: 140%;
+    width: 50px;
+    position: absolute;
+    top: -8px;
+    left: -150%;
+    transform: skewX(-45deg);
+}
+
+#bookForm {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 150px;
+    right: 150px;
+    top: 30%;
+    line-height: 14px;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 6px;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.904);
+    color: white;
+}
+
+#bookForm>input {
+    width: 100%;
+    border: 1px solid rgb(234, 100, 200);
+    padding: 4px 8px;
+}
+
+#bookForm>input:focus {
+    outline: 1px solid rgb(234, 100, 200);
+}
+
+.myStyle {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 15px;
+    border: 1px solid rgb(177, 160, 160);
+    margin: 10px;
+    border-radius: 5px;
+    text-overflow: clip;
+}
+
+.myStyle:hover {
+    background-color: rgba(165, 147, 147, 0.534);
+}
+
+.fa-trash-can {
+    cursor: pointer;
+}
