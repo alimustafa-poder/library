@@ -70,7 +70,7 @@ nav {
 
 .myStyle {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     padding: 15px;
     border: 1px solid rgb(177, 160, 160);
     margin: 10px;
@@ -84,4 +84,17 @@ nav {
 
 .fa-trash-can {
     cursor: pointer;
+    font-size: 20px;
+}
+
+.fa-circle-xmark{
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.fa-circle-check{
+    color: green;
+    cursor: pointer;
+    font-size: 20px;
 }
