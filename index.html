@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Library</title>
+    <link rel="stylesheet" href="library.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="library.js" defer></script>
+</head>
+
+<body>
+    <nav>Library</nav>
+    <div class="bookBtn">
+        <button class="addBook">Add New Book</button>
+    </div>
+    <div id="bookForm">
+        <label for="bookName">Enter Book Name:</label>
+        <input type="text" id="bookName" name="bookName" required><br>
+        <label for="authorName">Please enter the author name:</label>
+        <input type="text" id="authorName" name="authorName" required><br>
+        <label for="pages">Enter the number of pages:</label>
+        <input type="number" name="pages" id="pages" min="1" max="2000" required>
+        <input type="submit" class="submitBtn" value="Submit">
+        <input type="button" class="cancelBtn" value="Cancel">
+    </div>
+    <div class="lib myStyle">
+        <p>Book</p>
+        <p>Author</p>
+        <p>Pages</p>
+        <p>Delete</p>
+    </div>
+    <div class="library">
+    </div>
+</body>
+
+</html>
