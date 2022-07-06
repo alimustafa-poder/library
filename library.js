@@ -74,8 +74,7 @@ function libGen(arr) {
         })
         if (elem['read'] == false) {
             newDiv.innerHTML += `<i class="fa-solid fa-circle-xmark"></i>`;
-        } 
-        else if (elem['read'] == true){
+        } else if (elem['read'] == true) {
             newDiv.innerHTML += `<i class="fa-solid fa-circle-check"></i>`;
         }
         newDiv.innerHTML += `<i class="fa-solid fa-trash-can"></i>`;
@@ -92,11 +91,12 @@ cancelBtn.addEventListener('click', () => {
 //delete book and rerun the library generator func
 function delBook() {
     let del = document.querySelectorAll('.fa-trash-can');
-    del.forEach((elem) => {
+    del.forEach((elem,index) => {
         elem.addEventListener('click', (e) => {
             let bookCol = e.target.closest('div');
             let bookIndex = bookCol.getAttribute('data-column');
-            libArray.splice(bookIndex, bookIndex + 1);
+            if (bookIndex != libArray.indexOf(libArray[index])) return;
+            libArray.splice(bookIndex, 1);
             libGen(libArray);
         })
     })
