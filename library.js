@@ -19,7 +19,7 @@ addBook.addEventListener('click', () => {
     }
     else{
         bookForm.classList.add('active');
-        myLibrary.style.pointerEvents = 'auto';
+        myLibrary.style.pointerEvents = 'none';
     }
 })
 
