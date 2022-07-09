@@ -1,5 +1,4 @@
 let addBook = document.querySelector('.addBook');
-let bookForm = document.querySelector('#bookForm');
 let submitBtn = document.querySelector('.submitBtn');
 let cancelBtn = document.querySelector(".cancelBtn");
 
@@ -12,13 +11,14 @@ function getProps(elem, prop) {
 
 //form display
 addBook.addEventListener('click', () => {
+    let bookForm = document.querySelector('#bookForm');
     let myLibrary = document.querySelector('.library');
-    let displayProp = getProps(bookForm, 'display');
-    if (displayProp == 'none') {
-        bookForm.style.display = 'flex';
+    if (bookForm.classList.contains('active')) {
+        bookForm.classList.remove('active');
         myLibrary.style.pointerEvents = 'none';
-    } else {
-        bookForm.style.display = 'none';
+    }
+    else{
+        bookForm.classList.add('active');
         myLibrary.style.pointerEvents = 'auto';
     }
 })
@@ -50,7 +50,7 @@ submitBtn.addEventListener('click', () => {
 
 function hideReset() {
     let myLibrary = document.querySelector('.library');
-    bookForm.style.display = 'none';
+    bookForm.classList.remove('active');
     document.querySelector('#bookName').value = '';
     document.querySelector('#authorName').value = '';
     document.querySelector("#pages").value = '';
