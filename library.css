@@ -42,20 +42,25 @@ nav {
 }
 
 #bookForm {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  left: 150px;
-  right: 150px;
-  top: 30%;
+  top: 50%;/*credit to michealosman*/
+  left: 50%;/*credit to michealosman*/
   line-height: 14px;
   border: 2px solid black;
   padding: 15px;
   border-radius: 6px;
   gap: 10px;
   background-color: rgba(0, 0, 0, 0.904);
+  transform: translate(-50%, -50%) scale(0);/*credit to michealosman*/
   color: white;
+  transition: 0.2s ease-in-out;/*credit to michealosman*/
+}
+
+#bookForm.active{
+  transform: translate(-50%, -50%) scale(1);/*credit to michealosman*/
 }
 
 #bookForm>input {
