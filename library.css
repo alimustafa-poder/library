@@ -169,9 +169,3 @@ input:checked+.slider:before {
   align-items: center;
   gap: 20px;
 }
-
-.elemWidth{
-  width: 200px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
