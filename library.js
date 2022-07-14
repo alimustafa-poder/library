@@ -15,7 +15,7 @@ addBook.addEventListener('click', () => {
     let myLibrary = document.querySelector('.library');
     if (bookForm.classList.contains('active')) {
         bookForm.classList.remove('active');
-        myLibrary.style.pointerEvents = 'none';
+        myLibrary.style.pointerEvents = 'auto';
     }
     else{
         bookForm.classList.add('active');
@@ -71,6 +71,7 @@ function libGen(arr) {
             let newPara = document.createElement('p');
             newPara.textContent = key;
             newDiv.append(newPara);
+            newPara.classList.add('elemWidth');
         })
         if (elem['read'] == false) {
             newDiv.innerHTML += `<i class="fa-solid fa-circle-xmark"></i>`;
